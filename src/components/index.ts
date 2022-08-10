@@ -1,1 +1,1 @@
-export {default as Button} from './button';
+export { default as Spacer } from './spacer/index';

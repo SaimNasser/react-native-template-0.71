@@ -1,19 +1,18 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
-import {Text, View} from 'react-native';
-import {ScreenWrapper} from 'react-native-screen-wrapper';
-import {Button} from '~components';
-import {ScreenNames} from '~routes';
+import { View } from 'react-native';
+import { Button } from 'react-native-paper';
+import { ScreenWrapper } from 'react-native-screen-wrapper';
+import { ScreenNames } from '~routes';
+import styles from './styles';
 
-const Login = ({navigation}: NativeStackScreenProps<any>) => {
+const Login = ({ navigation }: NativeStackScreenProps<any>) => {
   return (
-    <ScreenWrapper>
-      <View style={{flex: 1}}>
-        <Text>Login Page</Text>
+    <ScreenWrapper statusBarColor='red'>
+      <View style={styles.container}>
         <Button
-          onPress={() => navigation.navigate(ScreenNames.FORGOT_PASSWORD)}>
-          Go To Forgot Password
-        </Button>
+          onPress={() => navigation.navigate(ScreenNames.FORGOT_PASSWORD)}
+          mode='contained' >Go To Forgot Password</Button>
       </View>
     </ScreenWrapper>
   );
