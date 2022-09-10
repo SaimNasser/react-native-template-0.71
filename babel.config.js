@@ -12,12 +12,12 @@ module.exports = {
           '^~(.+)': './src/\\1',
         },
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
-        // alias: {
-        //   '~routes': './src/routes/*',
-        //   '~screens': './src/screens/*',
-        //   '~store': './src/store/*',
-        // },
       },
     ],
   ],
+  env: {
+    production: {
+      plugins: ['react-native-paper/babel'],
+    },
+  },
 };

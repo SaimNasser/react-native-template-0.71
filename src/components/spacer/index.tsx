@@ -10,7 +10,6 @@ type HorizontalSpacerProps = {
   vertical?: never,
   horizontal: number
 }
-
 type Props = HorizontalSpacerProps | VerticalSpacerProps
 
 const Spacer: React.FC<Props> = ({ horizontal, vertical }) => {
