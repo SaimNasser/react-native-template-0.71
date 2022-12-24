@@ -1,13 +1,19 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-import Routes from './routes';
-import {store} from './store';
+import { LogBox } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { Provider } from 'react-redux';
 
+import Routes from '~routes';
+import { store } from '~store';
+import { Theme } from '~utils';
+LogBox.ignoreAllLogs(true)
 const App = () => {
   return (
-    <Provider store={store}>
-      <Routes />
-    </Provider>
+    <PaperProvider theme={Theme}>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    </PaperProvider>
   );
 };
 
