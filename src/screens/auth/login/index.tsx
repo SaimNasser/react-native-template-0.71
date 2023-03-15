@@ -8,7 +8,6 @@ import styles from './styles';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoginFormValidation } from './utils';
 import { Theme } from '~utils';
-
 const Login = ({ navigation }: NativeStackScreenProps<any>) => {
   const {
     control,
