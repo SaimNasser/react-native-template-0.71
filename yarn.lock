@@ -5710,7 +5710,7 @@ react-native-screen-wrapper@^1.0.4:
   dependencies:
     react-native-keyboard-aware-scroll-view "^0.9.5"
 
-react-native-screens@^3.13.1:
+react-native-screens@^3.20.0:
   version "3.20.0"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.20.0.tgz#4d154177395e5541387d9a05bc2e12e54d2fb5b1"
   integrity sha512-joWUKWAVHxymP3mL9gYApFHAsbd9L6ZcmpoZa6Sl3W/82bvvNVMqcfP7MeNqVCg73qZ8yL4fW+J/syusHleUgg==
