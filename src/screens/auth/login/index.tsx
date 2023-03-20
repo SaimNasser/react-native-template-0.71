@@ -8,7 +8,7 @@ import styles from './styles';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoginFormValidation } from './utils';
 import { Theme } from '~utils';
-
+import { ABCsvg } from '~assets/svgs';
 const Login = ({ navigation }: NativeStackScreenProps<any>) => {
   if (typeof HermesInternal === 'undefined') {
     console.log('Hermes is not enabled');
@@ -26,6 +26,7 @@ const Login = ({ navigation }: NativeStackScreenProps<any>) => {
     <ScreenWrapper statusBarColor={Theme.colors.primary} scrollType="keyboard">
       <View style={styles.container}>
         <View>
+          <ABCsvg />
         </View>
       </View>
     </ScreenWrapper>

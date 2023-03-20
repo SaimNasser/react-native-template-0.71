@@ -1,0 +1,21 @@
+<svg width="178" height="143" viewBox="0 0 178 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d)">
+        <path d="M102 68C102 49.2223 86.7777 34 68 34C49.2223 34 34 49.2223 34 68C34 86.7777 49.2223 102 68 102C86.7777 102 102 86.7777 102 68Z" fill="url(#paint0_radial)" />
+    </g>
+    <defs>
+        <filter id="filter0_d" x="0" y="0" width="178" height="178" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dx="21" dy="21" />
+            <feGaussianBlur stdDeviation="27.5" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0.905882 0 0 0 0 0.219608 0 0 0 0 0.270588 0 0 0 0.21 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(68 68) rotate(90) scale(34)">
+            <stop stop-color="#F37E7E" stop-opacity="0.88" />
+            <stop offset="0.510417" stop-color="#E73845" />
+            <stop offset="1" stop-color="#C80312" />
+        </radialGradient>
+    </defs>
+</svg>
