@@ -1,10 +1,9 @@
 import {
   createNavigationContainerRef,
-  NavigationContainer
+  NavigationContainer,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { Appbar } from 'react-native-paper';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '~store/slices/user';
 import { ForgotPasswordScreen, LoginScreen } from '../screens/auth';
@@ -18,11 +17,8 @@ const Routes = () => {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         screenOptions={{
-          animation: "slide_from_right",
-          header: ({ navigation, route: { name } }) => <Appbar.Header>
-            {navigation.canGoBack() && <Appbar.BackAction onPress={navigation.goBack} />}
-            <Appbar.Content title={name} />
-          </Appbar.Header>
+          animation: 'slide_from_right',
+          header: () => false,
         }}>
         <Stack.Screen name={ScreenNames.LOGIN} component={LoginScreen} />
         <Stack.Screen

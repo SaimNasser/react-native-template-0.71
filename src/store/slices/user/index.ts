@@ -1,11 +1,11 @@
-import {RootState} from '~store';
+import { RootState } from '~store';
 import userSlice from './slice';
 
 // Reducer
 export const userSliceReducer = userSlice.reducer;
 
 // Actions
-const {} = userSlice.actions;
+export const { setToken, setUserMeta, setIsLoggedIn } = userSlice.actions;
 // Selectors
 
 export const selectToken = (state: RootState) => state.user.token;

@@ -10,6 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "android:clean": "cd android && ./gradlew clean && cd ..",
     "fresh:ios": "rm -rf ./node_modules && cd ios/ && rm -rf ./pods && cd .. && yarn && cd ios/ && pod install && cd .. && yarn ios"
   },
   "dependencies": {
@@ -17,16 +18,15 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.1",
     "@reduxjs/toolkit": "^1.8.1",
-    "@types/react-native-vector-icons": "^6.4.12",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-hook-form": "^7.35.0",
     "react-native": "0.71.4",
     "react-native-config": "^1.5.0",
     "react-native-flipper": "^0.184.0",
     "react-native-safe-area-context": "^4.2.4",
     "react-native-screen-wrapper": "^1.0.4",
-    "react-native-screens": "^3.13.1",
-    "react-native-vector-icons": "^9.2.0",
+    "react-native-screens": "^3.20.0",
+    "react-native-svg": "^13.8.0",
     "react-redux": "^7.2.8",
     "redux-flipper": "^2.0.2",
     "yup": "^0.32.11"

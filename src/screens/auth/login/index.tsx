@@ -11,13 +11,20 @@ import { BASE_URL } from '@env';
 import { ScreenNames } from '~routes';
 
 const Login = ({ navigation }: NativeStackScreenProps<any>) => {
-  const theme = useTheme()
-  const { control, formState: { isValid } } = useForm({
+  if (typeof HermesInternal === 'undefined') {
+    console.log('Hermes is not enabled');
+  } else {
+    console.log('Hermes is enabled');
+  }
+  const {
+    control,
+    formState: { isValid },
+  } = useForm({
     mode: 'all',
-    resolver: yupResolver(LoginFormValidation)
-  })
+    resolver: yupResolver(LoginFormValidation),
+  });
   return (
-    <ScreenWrapper statusBarColor={theme.colors.primary} scrollType="keyboard">
+    <ScreenWrapper statusBarColor={Theme.colors.primary} scrollType="keyboard">
       <View style={styles.container}>
         <View>
           <ABCsvg />

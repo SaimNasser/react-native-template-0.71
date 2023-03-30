@@ -1,10 +1,8 @@
-import { StyleSheet } from "react-native";
-import { Theme } from "~utils";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    errorText:{
-        ...Theme.fonts.light,
-        fontSize: 14,
-        color: Theme.colors.error
-    }
-})
+  errorText: {
+    fontSize: 14,
+    color: 'red',
+  },
+});
