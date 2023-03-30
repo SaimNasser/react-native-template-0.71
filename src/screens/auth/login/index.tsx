@@ -1,16 +1,14 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React from 'react';
 import { useForm } from 'react-hook-form';
-import { View } from 'react-native';
-import { Button, TextInput, useTheme } from 'react-native-paper';
+import { View, Text } from 'react-native';
 import { ScreenWrapper } from 'react-native-screen-wrapper';
-import { Input } from '~components';
-import { ScreenNames } from '~routes';
+import { ABCsvg } from '~assets/svgs';
+import { Theme } from '~utils';
 import styles from './styles';
-import { yupResolver } from '@hookform/resolvers/yup'
 import { LoginFormValidation } from './utils';
-
-
+import { BASE_URL } from '@env';
+import { ScreenNames } from '~routes';
 
 const Login = ({ navigation }: NativeStackScreenProps<any>) => {
   const theme = useTheme()
@@ -22,25 +20,10 @@ const Login = ({ navigation }: NativeStackScreenProps<any>) => {
     <ScreenWrapper statusBarColor={theme.colors.primary} scrollType="keyboard">
       <View style={styles.container}>
         <View>
-          <Input
-            control={control}
-            name='email'
-            label={"Email"}
-            left={<TextInput.Icon name="email-outline" />}
-          />
-          <Input
-            control={control}
-            name='password'
-            label={"Password"}
-            left={<TextInput.Icon name="lock" />}
-            right={<TextInput.Icon name="eye" />}
-          />
+          <ABCsvg />
+          {console.log(BASE_URL)}
+          <Text>Base url: {BASE_URL}</Text>
         </View>
-        <Button
-          onPress={() => navigation.navigate(ScreenNames.FORGOT_PASSWORD)}
-          mode='contained'
-          disabled={!isValid}
-        >Login</Button>
       </View>
     </ScreenWrapper>
   );
