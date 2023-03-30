@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '13.0'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'reactNativeBoilerPlate' do
+abstract_target 'reactNativeBoilerPlateCommonPods' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -19,14 +19,21 @@ target 'reactNativeBoilerPlate' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-
   target 'reactNativeBoilerPlateTests' do
     inherit! :complete
     # Pods for testing
   end
 
+  target 'reactNativeBoilerPlateDev' do
+  end
+ 
+  target 'reactNativeBoilerPlateStg' do
+  end
+ 
+  target 'reactNativeBoilerPlate' do
+  end
+
   # Enables Flipper.
-  #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
   use_flipper!()

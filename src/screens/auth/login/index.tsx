@@ -7,8 +7,7 @@ import { ABCsvg } from '~assets/svgs';
 import { Theme } from '~utils';
 import styles from './styles';
 import { LoginFormValidation } from './utils';
-import { BASE_URL } from '@env';
-import { ScreenNames } from '~routes';
+import Config from 'react-native-config';
 
 const Login = ({ navigation }: NativeStackScreenProps<any>) => {
   if (typeof HermesInternal === 'undefined') {
@@ -23,13 +22,13 @@ const Login = ({ navigation }: NativeStackScreenProps<any>) => {
     mode: 'all',
     resolver: yupResolver(LoginFormValidation),
   });
+  console.log('BASE URL: ', Config.BASE_URL);
   return (
     <ScreenWrapper statusBarColor={Theme.colors.primary} scrollType="keyboard">
       <View style={styles.container}>
         <View>
           <ABCsvg />
-          {console.log(BASE_URL)}
-          <Text>Base url: {BASE_URL}</Text>
+          <Text>Base url: {Config.BASE_URL}</Text>
         </View>
       </View>
     </ScreenWrapper>

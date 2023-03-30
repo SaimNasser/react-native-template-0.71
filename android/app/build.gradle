@@ -1,9 +1,12 @@
 apply plugin: "com.android.application"
 
 project.ext.envConfigFiles = [
-   dev: ".env.development",
-   stage: ".env.staging",
-   prod: ".env.production",
+    productiondebug: ".env.production",
+    productionrelease: ".env.production",
+    developmentrelease: ".env.development",
+    developmentdebug: ".env.development",
+    stagingrelease: ".env.staging",
+    stagingdebug: ".env.staging"
 ]
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle" // <- add this line
@@ -145,7 +148,7 @@ android {
     productFlavors {
         production {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.reactnativeboilerplate.app.prod"
+            applicationId "com.reactnativeboilerplate.app.production"
             targetSdkVersion rootProject.ext.targetSdkVersion
             resValue "string", "build_config_package", "com.reactnativeboilerplate.app"
         }
@@ -170,6 +173,7 @@ android {
         versionCode 1
         versionName "1.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+        resValue "string", "build_config_package", "com.reactnativeboilerplate.app"
 
         if (isNewArchitectureEnabled()) {
             // We configure the NDK build only if you decide to opt-in for the New Architecture.
